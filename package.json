@@ -3,8 +3,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cf": "next build && npx @cloudflare/next-on-pages@latest build --output ./.next-on-pages",
+    "export": "next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "pnpm run build && npx wrangler deploy",
+    "deploy:cf": "pnpm run build:cf && npx wrangler deploy"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -81,13 +85,14 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.19",
+    "@cloudflare/next-on-pages": "latest",
     "eslint": "^9.39.1",
     "playwright": "1.44.0",
     "png-to-ico": "^3.0.1",
     "postcss": "^8.5",
     "sharp": "^0.34.4",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.61.1"
   }
 }

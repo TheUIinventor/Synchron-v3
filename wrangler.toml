@@ -1,0 +1,9 @@
+name = "synchron-v3"
+compatibility_date = "2026-02-01"
+
+# For Cloudflare Next-on-Pages output
+main = ".next-on-pages/worker.mjs"
+
+[site]
+bucket = ".next-on-pages/static"
+entry-point = "workers-site"
