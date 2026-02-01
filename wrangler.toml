@@ -6,4 +6,3 @@ main = ".next-on-pages/worker.mjs"
 
 [site]
 bucket = ".next-on-pages/static"
-entry-point = "workers-site"
